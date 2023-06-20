@@ -8,6 +8,14 @@ https://ascom-ebdee.web.app/
 ## Disclaimer
 The app was developed to meet all requirements but I didn't go beyond. If some additional skills should be showcased, just let me know, please.
 
+###
+
+Add .env file with the credentials and API url
+
+REACT_APP_USERNAME=
+REACT_APP_PASSWORD=
+REACT_APP_API=
+
 ## Available Scripts
 
 In the project directory, you can run:
