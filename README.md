@@ -12,9 +12,9 @@ The app was developed to meet all requirements but I didn't go beyond. If some a
 
 Add .env file with the credentials and API url
 
-REACT_APP_USERNAME=
-REACT_APP_PASSWORD=
-REACT_APP_API=
++REACT_APP_USERNAME=
++REACT_APP_PASSWORD=
++REACT_APP_API=
 
 ## Available Scripts
 
