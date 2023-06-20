@@ -1,0 +1,18 @@
+.arrow {
+   background-color: transparent;
+   border: none;
+   width: 15px;
+   font-size: 24px;
+   cursor: pointer;
+   color: lightgrey;
+   padding: 0;
+   text-align: center;
+}
+
+.active {
+   color: black;
+}
+.controls {
+   margin-left: 10px;
+   display: inline-block;
+}

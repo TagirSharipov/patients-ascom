@@ -1,0 +1,73 @@
+.button {
+   color: #4079A6;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 0;
+    line-height: 24px;
+    text-align: center;
+    padding: 15px 0px;
+    border: 2px solid #3A6D9A;
+    border-radius: 15px;
+    box-sizing: border-box;
+    background: none;
+    max-width: 190px;
+    width: 190px;
+    cursor: pointer;
+    text-decoration: none;
+}
+.controls {
+   flex-basis: 100%;
+   text-align: left;
+}
+.link {
+   color: #4079A6;
+   font-size: 16px;
+   font-weight: bold;
+   letter-spacing: 0;
+   line-height: 24px;
+   position: relative;
+   display: block;
+   cursor: pointer;
+   text-decoration: none;
+   transition: opacity 0.1s ease-in-out;
+   text-align: left;
+   padding-left: 30px;
+}
+.textInput, .select{
+   height: 49px;
+    box-sizing: border-box;
+    background-color: #FFFFFF;
+    border: none;
+    padding: 0px 14.5px;
+    color: #059696;
+    font-size: 20px;
+    font-style: italic;
+    letter-spacing: 0;
+    line-height: 24px;
+    width: 100%;
+    border-radius: 0;
+}
+
+.wrapper {
+   padding: 30px;
+   background-color: #D1E5E5;
+   display: flex;
+   column-gap: 30px;
+   flex-wrap: wrap;
+   row-gap: 30px;
+   
+}
+.inputWrapper {
+   max-width: 300px;
+   text-align: left;
+}
+.label {
+   box-sizing: border-box;
+   border: none;
+   padding: 0;
+   color: #059696;
+   font-size: 20px;
+   letter-spacing: 0;
+   line-height: 24px;
+   text-align: left;
+}

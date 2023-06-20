@@ -1,0 +1,51 @@
+.inputWrapper {
+   max-width: 300px;
+   text-align: left;
+}
+.label {
+   box-sizing: border-box;
+   border: none;
+   padding: 0;
+
+   font-size: 20px;
+   letter-spacing: 0;
+   line-height: 24px;
+   text-align: left;
+}
+.filter {
+   height: 49px;
+    box-sizing: border-box;
+    background-color: #FFFFFF;
+    border: 1px solid lightgrey;
+    padding: 0px 14.5px;
+    color: #059696;
+    font-size: 20px;
+    font-style: italic;
+    letter-spacing: 0;
+    line-height: 24px;
+    min-width: 300px;
+    border-radius: 0;
+    border-radius: 10px;
+    color: #059696;
+}
+.container {
+   padding: 30px;
+   max-width: 1280px;
+}
+.red {
+   color: red;
+}
+.link {
+   color: #4079A6;
+   font-size: 16px;
+   font-weight: bold;
+   letter-spacing: 0;
+   line-height: 24px;
+   position: relative;
+   display: block;
+   cursor: pointer;
+   text-decoration: none;
+   transition: opacity 0.1s ease-in-out;
+   text-align: left;
+   padding-left: 30px;
+}
