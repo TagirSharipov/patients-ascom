@@ -91,8 +91,10 @@ const PatientList = () => {
         className={style.filter}
         onChange={(e) => filterHandler(e)}
         placeholder='Type something to filter...'
+        autoComplete='off'
 
       />
+      <span className={style.tooltip}>Family Name, Given Name and BirthDate</span>
       <Table rows={rows} columns={columns}/>
     </div>
   );
