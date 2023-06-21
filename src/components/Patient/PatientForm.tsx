@@ -5,8 +5,8 @@ import { fetchPatient, postPatient } from "../../api/patients";
 import { Link, useParams } from "react-router-dom";
 import Table from "../Table/Table";
 
-const PatientForm = ({ patient }: { patient?:Patient }) => {
-   const [userData, setUserData] = useState<Patient | undefined>(undefined);
+const PatientForm = () => {
+   const [patient, setUserData] = useState<Patient | undefined>(undefined);
 
    const [loading, setLoading] = useState(false);
    let params = useParams();
@@ -32,25 +32,25 @@ const PatientForm = ({ patient }: { patient?:Patient }) => {
 
    const submit = async () => {
       setLoading(true);
-      if (userData) await postPatient(userData);
+      if (patient) await postPatient(patient);
       setLoading(false);
    }
    if (loading) return <div>Loading...</div>;
 
    return <div >
       <Link to='/' className={style.link}>&larr;Back</Link>
-      {userData && <form className={style.wrapper}>
+      {patient && <form className={style.wrapper}>
          <div className={style.inputWrapper}>
             <label htmlFor="lastname" className={style.label}>Family Name</label>
-            <input type="text" id="lastname" className={style.textInput} defaultValue={userData.familyName} onChange={e => handleChange('familyName', e.target.value)}/>
+            <input type="text" id="lastname" className={style.textInput} defaultValue={patient.familyName} onChange={e => handleChange('familyName', e.target.value)}/>
          </div>
          <div className={style.inputWrapper}>
             <label htmlFor="firstname" className={style.label}>Given Name</label>
-            <input type="text" id="firstname" className={style.textInput} defaultValue={userData.givenName} onChange={e => handleChange('givenName', e.target.value)} />
+            <input type="text" id="firstname" className={style.textInput} defaultValue={patient.givenName} onChange={e => handleChange('givenName', e.target.value)} />
          </div>
          <div className={style.inputWrapper}>
             <label htmlFor="sex" className={style.label}>Sex</label>
-            <select  className={style.select} id="sex" defaultValue={userData.sex} onChange={e => handleChange('sex', e.target.value)} >
+            <select  className={style.select} id="sex" defaultValue={patient.sex} onChange={e => handleChange('sex', e.target.value)} >
                <option value="M">Male</option>
                <option value="F">Female</option>
             </select>
@@ -62,8 +62,8 @@ const PatientForm = ({ patient }: { patient?:Patient }) => {
       </form>}
 
       <Table
-         columns={Object.keys(userData?.parameters[0] || {}).filter( f => f !== 'id')}
-         rows={userData?.parameters.map(p => [p.name, p.value, p.alarm ? 'Yes':'No']) || [[]]}
+         columns={Object.keys(patient?.parameters[0] || {}).filter( f => f !== 'id')}
+         rows={patient?.parameters.map(p => [p.name, p.value, p.alarm ? 'Yes':'No']) || [[]]}
       />
    </div>
      
