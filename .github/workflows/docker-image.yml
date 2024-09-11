@@ -1,0 +1,27 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Build the Docker image
+      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+    
+    
+    - name: Download a Build Artifact
+      uses: actions/download-artifact@v4.1.8
+      with:
+        # Name of the artifact to download. If unspecified, all artifacts for the run are downloaded.
+        name: Build the Docker image # optional
+        # Destination path. Supports basic tilde expansion. Defaults to $GITHUB_WORKSPACE
+       
